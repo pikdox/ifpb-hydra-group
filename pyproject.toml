@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ifpb-hydra-group"
+version = "0.1.0"
+description = ""
+authors = ["kleber-code <kleber.code@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{include = "ifpb_hydra_group"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.3"
+replit = "^3.2.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
