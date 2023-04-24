@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  :root {
+    --selection-bg-color:#00b7ff;
+    
+    --primary-bg-color:#D3D7F8;
+    --primary-text-color:#222222;
+    --primary-button-bg:#3FC9E8;
+    
+    --secundary-bg-color:#006470;
+    --secundary-text-color:#222222;
+  }
+  html {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    font-family:Helvetica;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    text-align: left;
+    padding: 3px 2rem;
+    background-color:var(--secundary-bg-color);
+    color:var(--secundary-text-color);
+  }
+
+  .link-button-container {
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+  }
+  .link-button-container a {
+    padding:10px;
+    background-color:#058b9c;
+    border-radius:10px;
+  }
+  
+  main { 
+    background-color:var(--primary-bg-color);
+    flex-grow:1;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #232323;
+    width: 100%;
+  }
+
+  a {
+    color: var(--primary-bg-color);
+    text-decoration: none;
+    cursor:pointer;
+  }
+  
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Hydra Group</title>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header>
+    <h1><a href="/menu">Hydra Group</a></h1>
+    <div class="link-button-container">
+      <a><i class="material-icons">home</i></a>
+      <a><i class="material-icons">person</i></a>
+      <a><i class="material-icons">settings</i></a>
+    </div>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    <p><a href='https://github.com/kleber-code/ifpb-hydra-group'>open-source(github)</a></p>
+  </footer>
+</body>
+</html>

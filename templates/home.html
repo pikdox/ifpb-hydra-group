@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .form-container {
+      max-width:500px;
+      display: flex;
+      flex-direction: row;
+      gap:10px;
+      background-color: #eef;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .container h1 {
+      text-align:center;
+    }
+
+    .form-container input[type=text] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #00000010;
+    }
+
+    .form-container button[type=submit] {
+      background-color: var(--primary-button-bg);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-container button[type=submit]:hover {
+      background-color: var(--selection-bg-color);
+      
+    }
+    
+  </style>
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1>Pesquisar</h1>
+    <form method="POST">
+      <div class="form-container">
+        <input type="text" id="search-input" name="query" placeholder="Pesquisar..." required>
+        <button type="submit"><i class="material-icons">search</i></button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
